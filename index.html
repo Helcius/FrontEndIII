@@ -6,102 +6,132 @@
     <title>LoginPage</title>
 
     <style>
-    /* Bordered form */
-form {
-  border: 3px solid #f1f1f1;
+    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
-/* Full-width inputs */
-input[type=text], input[type=password] {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #ccc;
-  box-sizing: border-box;
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('https://science.nasa.gov/wp-content/uploads/2023/09/Carina_Nebula-1.jpeg?w=4096&format=jpeg');
+    background-size: cover;
 }
 
-/* Set a style for all buttons */
-button {
-  background-color: #04AA6D;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
+.wrapper {
+    background-color: transparent;
+    border: 2px solid rgba(255,255,255,0.2);
+    backdrop-filter: blur(20px);
+    width: 420px;
+    padding: 30px 40px;
+    border-radius: 40px;
 }
 
-/* Add a hover effect for buttons */
-button:hover {
-  opacity: 0.8;
+.wrapper h1 {
+    font-size: 36px;
+    text-align: center;
+    color: white;
 }
 
-/* Extra style for the cancel button (red) */
-.cancelbtn {
-  width: auto;
-  padding: 10px 18px;
-  background-color: #f44336;
-}
-
-/* Center the avatar image inside this container */
-.imgcontainer {
-  text-align: center;
-  margin: 24px 0 12px 0;
-}
-
-/* Avatar image */
-img.avatar {
-  width: 40%;
-  border-radius: 50%;
-}
-
-/* Add padding to containers */
-.container {
-  padding: 16px;
-}
-
-/* The "Forgot password" text */
-span.psw {
-  float: right;
-  padding-top: 16px;
-}
-
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-  span.psw {
-    display: block;
-    float: none;
-  }
-  .cancelbtn {
+.wrapper .input-box {
+    position: relative;
     width: 100%;
-  }
+    height: 50px;
+    margin: 30px 0;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-radius: 40px;
+    font-size: 16px;
+    color: #fff;
+    padding: 20px 45px 20px 20px;
+}
+
+.input-box input::placeholder {
+    color: white;
+}
+
+.input-box i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 20px;
+    color: #fff;
+}
+
+.wrapper .remember-forgot {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14.5px;
+    margin: -15px 0 15px;
+    color: #fff;
+
+}
+
+.remember-forgot label input {
+    accent-color: #fff;
+    margin: 3px;
+    color: #fff;
+
+}
+
+.remember-forgot a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.wrapper .btn {
+    width: 100%;
+    height: 45px;
+    background-color: #fff;
+    border: none;
+    outline: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 40px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #333;
+    font-weight: 600;
 }
     </style>
 </head>
 <body>
-    <form action="action_page.php" method="post">
-        <div class="imgcontainer">
-          <img src="https://64.media.tumblr.com/26ceb62f592df7e977544102e696021f/0b5db8366afd978b-b9/s1280x1920/9f295ca7f4fbd089de4c21a8d5bbbef3b8ddcc46.jpg" alt="Avatar" class="avatar">
+  <div class="wrapper">
+    <form>
+        <h1>Login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Username" required>
+            <i class='bx bxs-user'></i>
         </div>
-      
-        <div class="container">
-          <label for="uname"><b>Username</b></label>
-          <input type="text" placeholder="Enter Username" name="uname" required>
-      
-          <label for="psw"><b>Password</b></label>
-          <input type="password" placeholder="Enter Password" name="psw" required>
-      
-          <button type="submit">Login</button>
-          <label>
-            <input type="checkbox" checked="checked" name="remember"> Remember me
-          </label>
+        <div class="input-box">
+            <input type="password" placeholder="Password" required>
+            <i class='bx bxs-lock-alt'></i>
         </div>
-      
-        <div class="container" style="background-color:#f1f1f1">
-          <button type="button" class="cancelbtn">Cancel</button>
-          <span class="psw">Forgot <a href="#">password?</a></span>
+        <div class="remember-forgot">
+            <label>
+                <input type="checkbox">
+                Remember me
+            </label>
+            <a href="#">Forgot password</a>
         </div>
-      </form>
+        <button type="submit" class="btn">Login</button>
+
+        <div class="register-link">
+            <p>Don't have an account? <a href="#">Register</a></p>
+            
+        </div>
+
+    </form>
+</div>
 </body>
 </html>
