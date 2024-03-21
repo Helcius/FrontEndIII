@@ -1,0 +1,7 @@
+{
+  "devDependencies": {
+    "ts-node": "^10.9.2"
+  },
+
+  "scripts": {"testesoma": "npx run teste.ts"}
+}
